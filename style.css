@@ -597,6 +597,16 @@ button {
 }
 
 /* 13. Animações de Entrada */
+/* 13. Alternância de Texto Responsivo */
+.story-desktop {
+  display: block;
+}
+
+.story-mobile {
+  display: none;
+}
+
+/* 14. Animações de Entrada */
 .fade-in-up {
   opacity: 0;
   transform: translateY(24px);
@@ -623,7 +633,7 @@ button {
   transform: translateY(0);
 }
 
-/* 14. Responsividade */
+/* 15. Responsividade Completa (Tablets & Mobile) */
 @media (max-width: 900px) {
   .prima-hero-grid,
   .prima-story-grid,
@@ -632,7 +642,8 @@ button {
   }
 
   .prima-hero-visual {
-    min-height: 460px;
+    min-height: 440px;
+    height: 50vh;
     width: 100%;
     border-right: none;
     border-bottom: 1px solid var(--color-border);
@@ -672,23 +683,78 @@ button {
   }
 }
 
+@media (max-width: 768px) {
+  .story-desktop {
+    display: none;
+  }
+
+  .story-mobile {
+    display: block;
+  }
+}
+
 @media (max-width: 600px) {
+  .prima-hero-visual {
+    min-height: 340px;
+    height: 44vh;
+  }
+
+  .prima-story-visual,
+  .prima-contact-visual {
+    min-height: 320px;
+  }
+
+  .prima-story-visual-wrap,
+  .prima-contact-visual-wrap {
+    padding: 24px 16px;
+  }
+
+  .prima-hero-text,
+  .prima-story-text,
+  .prima-contact-text {
+    padding: 44px 20px;
+  }
+
+  .prima-section-intro {
+    padding: 0 20px 32px 20px;
+  }
+
   .prima-columns-grid {
     grid-template-columns: 1fr;
   }
 
-  .prima-hero-visual,
-  .prima-story-visual,
-  .prima-contact-visual {
-    min-height: 360px;
+  .prima-col {
+    padding: 36px 20px;
+  }
+
+  .prima-quote-banner {
+    padding: 64px 20px;
   }
 
   .prima-actions {
     flex-direction: column;
     width: 100%;
+    gap: 12px;
   }
 
   .prima-btn {
     width: 100%;
+    text-align: center;
+    padding: 14px 20px;
+  }
+
+  .prima-title {
+    font-size: clamp(2.2rem, 8.5vw, 2.9rem);
+  }
+
+  .prima-heading {
+    font-size: clamp(1.65rem, 6.5vw, 2.1rem);
+  }
+
+  .whatsapp-float {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
   }
 }
