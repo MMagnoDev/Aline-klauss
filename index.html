@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aline Klaus — Estética Facial e Corporal | Biomedicina Estética no Porto</title>
   <meta name="description"
-    content="Especialista em Estética Facial e Corporal com Aline Klaus no Porto, Portugal. Tratamentos faciais, protocolos corporais avançados, EMSCULPT, depilação a laser, peelings e bem-estar.">
+    content="Aline Klaus — Biomedicina Estética no Porto, Portugal. Cuidado, acolhimento e tratamentos personalizados: Limpeza de Pele, Microagulhamento, Micropigmentação Labial, Visagismo de Sobrancelha, Depilação a Laser e Tratamentos Corporais.">
 
   <!-- Google Fonts: Cormorant Garamond (editorial) & Manrope (clean sans) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,9 +32,11 @@
           <img src="hero.png" alt="Aline Klaus — Biomedicina Estética" fetchpriority="high">
         </div>
         <div class="prima-hero-text fade-in-up delay-1">
-          <h1 class="prima-title">Aline Klaus</h1>
+          <h1 class="prima-brand">
+            <img src="logo.png" alt="Aline Klaus — Biomedicina Estética" class="prima-logo" fetchpriority="high">
+          </h1>
           <p class="prima-lead">
-            A estética vai muito além da aparência. É sobre autocuidado, confiança e a forma como nos sentimos quando olhamos para nós mesmas.
+            Entrego cuidado, acolhimento e resultados que valorizam a beleza natural de cada pessoa. Cada atendimento é realizado de forma personalizada, respeitando as necessidades, os objetivos e a individualidade de cada cliente.
           </p>
           <p class="prima-meta-location">
             Porto — Portugal
@@ -65,23 +67,23 @@
                 Minha jornada na estética começou muito antes de abrir uma agenda de atendimentos, pois o cuidado começou primeiro em mim.
               </p>
               <p>
-                Em 2019, me formei em <strong>Biomedicina Estética</strong> em São Paulo, Brasil, e desde então venho me dedicando a ajudar pessoas a se sentirem mais bonitas, confiantes e bem consigo mesmas.
+                Em 2019, me formei em <strong>Biomedicina Estética</strong> em São Paulo, Brasil, e desde então venho me dedicando a ajudar pessoas a se sentirem mais bonitas, confiantes e de bem consigo mesmas.
               </p>
               <p>
-                No Brasil, atuei com procedimentos estéticos avançados, como aplicação de toxina botulínica, preenchimentos, bioestimuladores de colágeno, secagem de vasinhos e diversos outros tratamentos faciais e corporais.
+                No Brasil, atuei com procedimentos estéticos avançados, desenvolvendo um olhar refinado para a harmonia e o respeito à individualidade.
               </p>
               <p>
-                Em 2022, decidi viver uma nova experiência e me mudei para o <strong>Porto - Portugal</strong>. Aqui continuo trabalhando na área da estética, realizando procedimentos como depilação a laser, peeling químico, limpeza de pele, micropigmentação labial, manta térmica, corrente russa, EMSCULPT e outros tratamentos voltados para o bem-estar e autoestima.
+                Em 2022, decidi viver uma nova experiência e me mudei para o <strong>Porto — Portugal</strong>. Aqui realizo atendimentos exclusivos e personalizados com procedimentos como limpeza de pele, microagulhamento, micropigmentação labial, visagismo de sobrancelha, depilação a laser e, em breve, novos protocolos de tratamentos corporais.
               </p>
             </div>
 
-            <!-- Versão Resumida e Fluida (Mobile — mantendo todas informações essenciais) -->
+            <!-- Versão Resumida e Fluida (Mobile) -->
             <div class="story-mobile">
               <p>
-                Formada em <strong>Biomedicina Estética</strong> em São Paulo (2019), construí minha trajetória aplicando procedimentos avançados faciais e corporais focados na beleza natural e confiança.
+                Formada em <strong>Biomedicina Estética</strong> em São Paulo (2019), construí minha trajetória focada na valorização da beleza natural, cuidado e acolhimento.
               </p>
               <p>
-                Desde 2022 atuando no <strong>Porto — Portugal</strong>, realizo protocolos de alta tecnologia e bem-estar como Depilação a Laser, Peeling químico, Limpeza de pele profunda, Micropigmentação labial, EMSCULPT, Corrente Russa e Manta térmica Detox.
+                Desde 2022 no <strong>Porto — Portugal</strong>, realizo tratamentos personalizados: Limpeza de Pele, Microagulhamento, Micropigmentação Labial, Visagismo de Sobrancelha, Depilação a Laser e, em breve, Tratamentos Corporais.
               </p>
             </div>
           </div>
@@ -99,82 +101,194 @@
       </div>
     </section>
 
-    <!-- 3. GRADE DE 4 COLUNAS: ESPECIALIDADES & TRATAMENTOS -->
+    <!-- 3. CARROSSEL DE TRATAMENTOS: LOOPING AUTOMÁTICO & CONTROLÁVEL -->
     <section class="prima-block prima-services reveal" id="procedimentos">
       <div class="prima-section-intro">
-        <h2 class="prima-heading">Tratamentos & Procedimentos</h2>
+        <div class="prima-intro-header">
+          <div class="prima-intro-text">
+            <h2 class="prima-heading">Tratamentos & Procedimentos</h2>
+            <p class="prima-section-subtitle">
+              Protocolos individualizados para realçar o que há de melhor em você.
+            </p>
+          </div>
+          <div class="prima-carousel-controls">
+            <button type="button" class="prima-ctrl-btn" id="carouselPrev" aria-label="Ver tratamento anterior">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </button>
+            <button type="button" class="prima-ctrl-btn" id="carouselNext" aria-label="Ver próximo tratamento">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
 
-      <div class="prima-columns-grid">
-        <!-- COLUNA 1 -->
-        <div class="prima-col">
-          <h3 class="prima-col-title">Estética Facial & Rejuvenescimento</h3>
-          <p class="prima-col-text">
-            Limpeza de pele profunda, peelings químicos e micropigmentação labial para renovação celular, hidratação profunda e realce dos traços naturais.
-          </p>
-          <a href="https://wa.me/351936186556?text=Olá,%20Aline!%20Gostaria%20de%20saber%20mais%20sobre%20os%20Tratamentos%20Faciais."
-            target="_blank" rel="noopener noreferrer" class="prima-col-link"
-            aria-label="Saber mais sobre Tratamentos Faciais no WhatsApp">
-            Saber mais &rarr;
-          </a>
-        </div>
+      <div class="prima-carousel-wrapper" id="treatmentsCarousel" data-lenis-prevent aria-label="Carrossel de procedimentos da Aline Klaus">
+        <div class="prima-carousel-track" id="treatmentsTrack">
+          <!-- GRUPO 1 -->
+          <!-- Card 1: Limpeza de Pele -->
+          <div class="prima-col">
+            <h3 class="prima-col-title">Limpeza de Pele</h3>
+            <p class="prima-col-text">
+              Higienização profunda, desobstrução de poros, remoção de impurezas e revitalização completa da cútis, restaurando a luminosidade e o equilíbrio da sua pele.
+            </p>
+            <a href="https://wa.me/351936186556?text=Olá,%20Aline!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Limpeza%20de%20Pele."
+              target="_blank" rel="noopener noreferrer" class="prima-col-link"
+              aria-label="Saber mais sobre Limpeza de Pele no WhatsApp">
+              Saber mais &rarr;
+            </a>
+          </div>
 
-        <!-- COLUNA 2 -->
-        <div class="prima-col">
-          <h3 class="prima-col-title">Tecnologia & EMSCULPT</h3>
-          <p class="prima-col-text">
-            Protocolos de alta performance com EMSCULPT e Corrente Russa para tônus muscular, contorno corporal, queima de gordura e fortalecimento.
-          </p>
-          <a href="https://wa.me/351936186556?text=Olá,%20Aline!%20Gostaria%20de%20saber%20mais%20sobre%20o%20EMSCULPT%20e%20Corrente%20Russa."
-            target="_blank" rel="noopener noreferrer" class="prima-col-link"
-            aria-label="Saber mais sobre EMSCULPT no WhatsApp">
-            Saber mais &rarr;
-          </a>
-        </div>
+          <!-- Card 2: Microagulhamento -->
+          <div class="prima-col">
+            <h3 class="prima-col-title">Microagulhamento</h3>
+            <p class="prima-col-text">
+              Estimulação intensiva de colágeno e elastina por indução percutânea, promovendo renovação celular, suavização de linhas de expressão, manchas e textura uniforme.
+            </p>
+            <a href="https://wa.me/351936186556?text=Olá,%20Aline!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Microagulhamento."
+              target="_blank" rel="noopener noreferrer" class="prima-col-link"
+              aria-label="Saber mais sobre Microagulhamento no WhatsApp">
+              Saber mais &rarr;
+            </a>
+          </div>
 
-        <!-- COLUNA 3 -->
-        <div class="prima-col">
-          <h3 class="prima-col-title">Depilação a Laser Avançada</h3>
-          <p class="prima-col-text">
-            Tecnologia de ponta para redução progressiva e definitiva dos pelos com máximo conforto, segurança e respeito a todos os tipos de pele.
-          </p>
-          <a href="https://wa.me/351936186556?text=Olá,%20Aline!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Depilação%20a%20Laser."
-            target="_blank" rel="noopener noreferrer" class="prima-col-link"
-            aria-label="Saber mais sobre Depilação a Laser no WhatsApp">
-            Saber mais &rarr;
-          </a>
-        </div>
+          <!-- Card 3: Micropigmentação Labial -->
+          <div class="prima-col">
+            <h3 class="prima-col-title">Micropigmentação Labial</h3>
+            <p class="prima-col-text">
+              Revitalização da cor e definição sutil do contorno labial com efeito natural e delicado, proporcionando lábios corados, iluminados e com aspecto saudável diariamente.
+            </p>
+            <a href="https://wa.me/351936186556?text=Olá,%20Aline!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Micropigmentação%20Labial."
+              target="_blank" rel="noopener noreferrer" class="prima-col-link"
+              aria-label="Saber mais sobre Micropigmentação Labial no WhatsApp">
+              Saber mais &rarr;
+            </a>
+          </div>
 
-        <!-- COLUNA 4 -->
-        <div class="prima-col">
-          <h3 class="prima-col-title">Termoterapia & Manta Térmica</h3>
-          <p class="prima-col-text">
-            Tratamento termoterápico para redução da retenção de líquidos, estímulo do metabolismo, desintoxicação e relaxamento muscular profundo.
-          </p>
-          <a href="https://wa.me/351936186556?text=Olá,%20Aline!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Manta%20Térmica%20Detox."
-            target="_blank" rel="noopener noreferrer" class="prima-col-link"
-            aria-label="Saber mais sobre Manta Térmica Detox no WhatsApp">
-            Saber mais &rarr;
-          </a>
+          <!-- Card 4: Visagismo de Sobrancelha -->
+          <div class="prima-col">
+            <h3 class="prima-col-title">Visagismo de Sobrancelha</h3>
+            <p class="prima-col-text">
+              Mapeamento e desenho personalizado de acordo com as proporções e a anatomia única do seu rosto, valorizando a expressão natural e trazendo harmonia ao olhar.
+            </p>
+            <a href="https://wa.me/351936186556?text=Olá,%20Aline!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Visagismo%20de%20Sobrancelha."
+              target="_blank" rel="noopener noreferrer" class="prima-col-link"
+              aria-label="Saber mais sobre Visagismo de Sobrancelha no WhatsApp">
+              Saber mais &rarr;
+            </a>
+          </div>
+
+          <!-- Card 5: Depilação a Laser -->
+          <div class="prima-col">
+            <h3 class="prima-col-title">Depilação a Laser</h3>
+            <p class="prima-col-text">
+              Eliminação progressiva e definitiva dos pelos com tecnologia segura, eficiente e confortável, garantindo pele macia, livre de foliculite e praticidade duradoura.
+            </p>
+            <a href="https://wa.me/351936186556?text=Olá,%20Aline!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Depilação%20a%20Laser."
+              target="_blank" rel="noopener noreferrer" class="prima-col-link"
+              aria-label="Saber mais sobre Depilação a Laser no WhatsApp">
+              Saber mais &rarr;
+            </a>
+          </div>
+
+          <!-- Card 6: Tratamentos Corporais (Em Breve) -->
+          <div class="prima-col prima-col-upcoming">
+            <h3 class="prima-col-title">Tratamentos Corporais</h3>
+            <p class="prima-col-text">
+              Novos protocolos corporais exclusivos e avançados chegando em breve para cuidar do seu contorno, circulação, firmeza e momentos de relaxamento profundo.
+            </p>
+            <a href="https://wa.me/351936186556?text=Olá,%20Aline!%20Gostaria%20de%20saber%20mais%20sobre%20os%20futuros%20Tratamentos%20Corporais."
+              target="_blank" rel="noopener noreferrer" class="prima-col-link"
+              aria-label="Saber mais sobre os futuros Tratamentos Corporais no WhatsApp">
+              Consultar novidades &rarr;
+            </a>
+          </div>
+
+          <!-- GRUPO 2 (CLONES PARA LOOPING INFINITO CONTÍNUO) -->
+          <!-- Card 1 Duplicate -->
+          <div class="prima-col" aria-hidden="true">
+            <h3 class="prima-col-title">Limpeza de Pele</h3>
+            <p class="prima-col-text">
+              Higienização profunda, desobstrução de poros, remoção de impurezas e revitalização completa da cútis, restaurando a luminosidade e o equilíbrio da sua pele.
+            </p>
+            <a href="https://wa.me/351936186556?text=Olá,%20Aline!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Limpeza%20de%20Pele."
+              target="_blank" rel="noopener noreferrer" class="prima-col-link" tabindex="-1">
+              Saber mais &rarr;
+            </a>
+          </div>
+
+          <!-- Card 2 Duplicate -->
+          <div class="prima-col" aria-hidden="true">
+            <h3 class="prima-col-title">Microagulhamento</h3>
+            <p class="prima-col-text">
+              Estimulação intensiva de colágeno e elastina por indução percutânea, promovendo renovação celular, suavização de linhas de expressão, manchas e textura uniforme.
+            </p>
+            <a href="https://wa.me/351936186556?text=Olá,%20Aline!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Microagulhamento."
+              target="_blank" rel="noopener noreferrer" class="prima-col-link" tabindex="-1">
+              Saber mais &rarr;
+            </a>
+          </div>
+
+          <!-- Card 3 Duplicate -->
+          <div class="prima-col" aria-hidden="true">
+            <h3 class="prima-col-title">Micropigmentação Labial</h3>
+            <p class="prima-col-text">
+              Revitalização da cor e definição sutil do contorno labial com efeito natural e delicado, proporcionando lábios corados, iluminados e com aspecto saudável diariamente.
+            </p>
+            <a href="https://wa.me/351936186556?text=Olá,%20Aline!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Micropigmentação%20Labial."
+              target="_blank" rel="noopener noreferrer" class="prima-col-link" tabindex="-1">
+              Saber mais &rarr;
+            </a>
+          </div>
+
+          <!-- Card 4 Duplicate -->
+          <div class="prima-col" aria-hidden="true">
+            <h3 class="prima-col-title">Visagismo de Sobrancelha</h3>
+            <p class="prima-col-text">
+              Mapeamento e desenho personalizado de acordo com as proporções e a anatomia única do seu rosto, valorizando a expressão natural e trazendo harmonia ao olhar.
+            </p>
+            <a href="https://wa.me/351936186556?text=Olá,%20Aline!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Visagismo%20de%20Sobrancelha."
+              target="_blank" rel="noopener noreferrer" class="prima-col-link" tabindex="-1">
+              Saber mais &rarr;
+            </a>
+          </div>
+
+          <!-- Card 5 Duplicate -->
+          <div class="prima-col" aria-hidden="true">
+            <h3 class="prima-col-title">Depilação a Laser</h3>
+            <p class="prima-col-text">
+              Eliminação progressiva e definitiva dos pelos com tecnologia segura, eficiente e confortável, garantindo pele macia, livre de foliculite e praticidade duradoura.
+            </p>
+            <a href="https://wa.me/351936186556?text=Olá,%20Aline!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Depilação%20a%20Laser."
+              target="_blank" rel="noopener noreferrer" class="prima-col-link" tabindex="-1">
+              Saber mais &rarr;
+            </a>
+          </div>
+
+          <!-- Card 6 Duplicate -->
+          <div class="prima-col prima-col-upcoming" aria-hidden="true">
+            <h3 class="prima-col-title">Tratamentos Corporais</h3>
+            <p class="prima-col-text">
+              Novos protocolos corporais exclusivos e avançados chegando em breve para cuidar do seu contorno, circulação, firmeza e momentos de relaxamento profundo.
+            </p>
+            <a href="https://wa.me/351936186556?text=Olá,%20Aline!%20Gostaria%20de%20saber%20mais%20sobre%20os%20futuros%20Tratamentos%20Corporais."
+              target="_blank" rel="noopener noreferrer" class="prima-col-link" tabindex="-1">
+              Consultar novidades &rarr;
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 4. BANNER EDITORIAL DE MANIFESTO / CITAÇÃO -->
-    <section class="prima-block prima-quote-banner reveal">
-      <div class="prima-quote-content">
-        <blockquote class="prima-quote-text">
-          "Acredito que a estética vai muito além da aparência. É sobre autocuidado, confiança e a forma como nos sentimos quando olhamos para nós mesmas. E essa é a missão que levo comigo todos os dias: valorizar a beleza natural de cada pessoa que passa pelas minhas mãos."
-        </blockquote>
-      </div>
-    </section>
-
-    <!-- 5. ATENDIMENTO NO PORTO: FOTO ESQUERDA / DETALHES DIREITA -->
+    <!-- 4. ATENDIMENTO NO PORTO: FOTO ESQUERDA / DETALHES DIREITA -->
     <section class="prima-block prima-contact reveal" id="contato">
       <div class="prima-contact-grid">
         <div class="prima-contact-visual-wrap">
           <div class="prima-contact-visual">
-            <img src="perfil.png" alt="Aline Klaus atendimento no Porto" loading="lazy">
+            <img src="atendimento.jpg" alt="Aline Klaus atendimento no Porto" loading="lazy">
           </div>
         </div>
         <div class="prima-contact-text">
@@ -335,6 +449,208 @@
             wppFloat.classList.remove("visible");
           }
         });
+      }
+
+      // 6. Carrossel Infinito & Controlável (Touch Mobile Nativo + Mouse Drag + Botões)
+      const carouselWrapper = document.getElementById("treatmentsCarousel");
+      const carouselTrack = document.getElementById("treatmentsTrack");
+      const btnPrev = document.getElementById("carouselPrev");
+      const btnNext = document.getElementById("carouselNext");
+
+      if (carouselWrapper && carouselTrack) {
+        let currentPos = 0;
+        let targetPos = 0;
+        let isAnimatingToTarget = false;
+        let isPaused = false;
+        let isDragging = false;
+        let startX = 0;
+        let startY = 0;
+        let startPos = 0;
+        let isHorizontalSwipe = null;
+        let hasMoved = false;
+        let autoResumeTimeout = null;
+        const autoSpeed = 0.8; // px por frame em 60fps
+
+        // Detecção de suporte real a hover (mouse no desktop vs touch mobile)
+        const isTouchDevice = () => ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+
+        function getHalfWidth() {
+          const w = carouselTrack.scrollWidth;
+          return w > 0 ? w / 2 : 1800;
+        }
+
+        function getCardWidth() {
+          const firstCard = carouselTrack.querySelector(".prima-col");
+          return firstCard ? firstCard.offsetWidth : (window.innerWidth < 600 ? 300 : 380);
+        }
+
+        // Loop contínuo a 60FPS
+        function animateCarousel() {
+          const halfWidth = getHalfWidth();
+
+          if (halfWidth > 0) {
+            if (isAnimatingToTarget) {
+              const diff = targetPos - currentPos;
+              if (Math.abs(diff) < 0.8) {
+                currentPos = targetPos;
+                isAnimatingToTarget = false;
+              } else {
+                currentPos += diff * 0.16;
+              }
+            } else if (!isPaused && !isDragging) {
+              currentPos += autoSpeed;
+            }
+
+            // Normalização fluida para loop infinito
+            while (currentPos >= halfWidth) {
+              currentPos -= halfWidth;
+              targetPos -= halfWidth;
+            }
+            while (currentPos < 0) {
+              currentPos += halfWidth;
+              targetPos += halfWidth;
+            }
+
+            carouselTrack.style.transform = `translate3d(${-currentPos}px, 0, 0)`;
+          }
+
+          requestAnimationFrame(animateCarousel);
+        }
+
+        requestAnimationFrame(animateCarousel);
+
+        function pauseTemporarily(ms = 3000) {
+          isPaused = true;
+          if (autoResumeTimeout) clearTimeout(autoResumeTimeout);
+          autoResumeTimeout = setTimeout(() => {
+            isPaused = false;
+          }, ms);
+        }
+
+        // Botão Próximo
+        if (btnNext) {
+          const handleNext = (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const step = getCardWidth();
+            targetPos = currentPos + step;
+            isAnimatingToTarget = true;
+            pauseTemporarily(3500);
+          };
+          btnNext.addEventListener("click", handleNext);
+        }
+
+        // Botão Anterior
+        if (btnPrev) {
+          const handlePrev = (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const step = getCardWidth();
+            targetPos = currentPos - step;
+            isAnimatingToTarget = true;
+            pauseTemporarily(3500);
+          };
+          btnPrev.addEventListener("click", handlePrev);
+        }
+
+        // Hover Desktop apenas (não trava em aparelhos touch)
+        if (!isTouchDevice()) {
+          carouselWrapper.addEventListener("mouseenter", () => {
+            isPaused = true;
+            if (autoResumeTimeout) clearTimeout(autoResumeTimeout);
+          });
+
+          carouselWrapper.addEventListener("mouseleave", () => {
+            if (!isDragging) {
+              isPaused = false;
+            }
+          });
+        }
+
+        // --- SUPORTE TOUCH ROBUSTO (MOBILE) ---
+        carouselWrapper.addEventListener("touchstart", (e) => {
+          if (e.touches.length !== 1) return;
+          isDragging = true;
+          isAnimatingToTarget = false;
+          hasMoved = false;
+          isHorizontalSwipe = null;
+          startX = e.touches[0].clientX;
+          startY = e.touches[0].clientY;
+          startPos = currentPos;
+          if (autoResumeTimeout) clearTimeout(autoResumeTimeout);
+        }, { passive: true });
+
+        carouselWrapper.addEventListener("touchmove", (e) => {
+          if (!isDragging || e.touches.length !== 1) return;
+          const currentX = e.touches[0].clientX;
+          const currentY = e.touches[0].clientY;
+          const deltaX = currentX - startX;
+          const deltaY = currentY - startY;
+
+          if (isHorizontalSwipe === null) {
+            if (Math.abs(deltaX) > 6 || Math.abs(deltaY) > 6) {
+              isHorizontalSwipe = Math.abs(deltaX) >= Math.abs(deltaY);
+              if (!isHorizontalSwipe) {
+                // Se é rolagem vertical da página, solta o arraste horizontal imediatamente
+                isDragging = false;
+                return;
+              }
+            }
+          }
+
+          if (isHorizontalSwipe) {
+            if (e.cancelable) e.preventDefault();
+            hasMoved = true;
+            currentPos = startPos - deltaX;
+            targetPos = currentPos;
+          }
+        }, { passive: false });
+
+        const handleTouchEnd = () => {
+          if (!isDragging) return;
+          isDragging = false;
+          pauseTemporarily(2500);
+        };
+
+        carouselWrapper.addEventListener("touchend", handleTouchEnd, { passive: true });
+        carouselWrapper.addEventListener("touchcancel", handleTouchEnd, { passive: true });
+
+        // --- SUPORTE MOUSE DRAG (DESKTOP) ---
+        carouselWrapper.addEventListener("mousedown", (e) => {
+          if (e.button !== 0 || isTouchDevice()) return;
+          isDragging = true;
+          isAnimatingToTarget = false;
+          hasMoved = false;
+          startX = e.clientX;
+          startPos = currentPos;
+          carouselWrapper.classList.add("is-dragging");
+          if (autoResumeTimeout) clearTimeout(autoResumeTimeout);
+        });
+
+        window.addEventListener("mousemove", (e) => {
+          if (!isDragging) return;
+          const deltaX = e.clientX - startX;
+          if (Math.abs(deltaX) > 4) {
+            hasMoved = true;
+          }
+          currentPos = startPos - deltaX;
+          targetPos = currentPos;
+        });
+
+        window.addEventListener("mouseup", () => {
+          if (!isDragging) return;
+          isDragging = false;
+          carouselWrapper.classList.remove("is-dragging");
+          pauseTemporarily(2000);
+        });
+
+        // Previne abertura acidental do WhatsApp durante o arraste
+        carouselTrack.addEventListener("click", (e) => {
+          if (hasMoved) {
+            e.preventDefault();
+            e.stopPropagation();
+          }
+        }, true);
       }
 
     });

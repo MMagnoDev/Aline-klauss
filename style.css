@@ -13,6 +13,11 @@
   --color-accent: #1A1918;
   --color-accent-stone: #8E8880;
 
+  /* Cor de Assinatura Exclusiva: R69 G68 B48 */
+  --color-olive: rgb(69, 68, 48);
+  --color-olive-tint: rgba(69, 68, 48, 0.08);
+  --color-olive-subtle: rgba(69, 68, 48, 0.16);
+
   --color-border: #E8E4DC;
   --color-border-subtle: #F0EDE6;
 
@@ -92,7 +97,7 @@ button {
 }
 
 ::selection {
-  background-color: var(--color-text);
+  background-color: var(--color-olive);
   color: #FFFFFF;
 }
 
@@ -119,8 +124,23 @@ button {
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--color-accent-stone);
+  color: var(--color-olive);
   margin-bottom: 24px;
+}
+
+.prima-brand {
+  margin: 0 0 28px 0;
+  display: block;
+}
+
+.prima-logo {
+  display: block;
+  width: auto;
+  max-width: clamp(200px, 20vw, 290px);
+  max-height: 85px;
+  height: auto;
+  object-fit: contain;
+  object-position: left center;
 }
 
 .prima-title {
@@ -162,8 +182,8 @@ button {
 }
 
 .prima-btn-dark:hover {
-  background-color: #383533;
-  border-color: #383533;
+  background-color: var(--color-olive);
+  border-color: var(--color-olive);
   transform: translateY(-2px);
 }
 
@@ -174,8 +194,9 @@ button {
 }
 
 .prima-btn-outline:hover {
-  background-color: var(--color-block-cream);
-  border-color: var(--color-text);
+  background-color: var(--color-olive-tint);
+  border-color: var(--color-olive);
+  color: var(--color-olive);
   transform: translateY(-2px);
 }
 
@@ -186,14 +207,14 @@ button {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-text);
-  border-bottom: 1px solid var(--color-text);
+  border-bottom: 1px solid var(--color-olive);
   padding-bottom: 3px;
   margin-top: 16px;
 }
 
 .prima-link:hover {
-  color: var(--color-accent-stone);
-  border-color: var(--color-accent-stone);
+  color: var(--color-olive);
+  border-color: var(--color-olive);
 }
 
 /* 6. Bloco 1: Hero (50/50 Full Screen Split — Texto com mais margens/respiro) */
@@ -257,7 +278,7 @@ button {
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--color-accent-stone);
+  color: var(--color-olive);
   margin-bottom: 36px;
 }
 
@@ -334,77 +355,130 @@ button {
   transform: scale(1.02);
 }
 
-/* 8. Bloco 3: Grade 4 Colunas (Especialidades Refinadas) */
+/* 8. Bloco 3: Carrossel de Procedimentos (Looping Automático & Controlável) */
 .prima-services {
   width: 100%;
   padding: clamp(70px, 7vw, 110px) 0 0 0;
   background-color: #FFFFFF;
   border-bottom: 1px solid var(--color-border);
+  overflow: hidden;
 }
 
 .prima-section-intro {
-  padding: 0 clamp(32px, 8vw, 120px) clamp(36px, 4vw, 50px) clamp(32px, 8vw, 120px);
-  text-align: center;
+  padding: 0 clamp(32px, 8vw, 120px) clamp(28px, 3.5vw, 44px) clamp(32px, 8vw, 120px);
 }
 
-.prima-columns-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+.prima-intro-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+}
+
+.prima-intro-text {
+  max-width: 600px;
+}
+
+.prima-section-subtitle {
+  font-size: clamp(0.85rem, 0.98vw, 0.95rem);
+  color: var(--color-text-muted);
+  letter-spacing: 0.04em;
+  margin-top: -12px;
+}
+
+.prima-carousel-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.prima-ctrl-btn {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--color-border);
+  background-color: #FFFFFF;
+  color: var(--color-text);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  z-index: 10;
+  transition: var(--transition);
+}
+
+.prima-ctrl-btn:hover {
+  background-color: var(--color-olive);
+  color: #FFFFFF;
+  border-color: var(--color-olive);
+  transform: translateY(-2px);
+}
+
+.prima-ctrl-btn:active {
+  transform: scale(0.94);
+}
+
+.prima-carousel-wrapper {
   width: 100%;
+  overflow: hidden;
+  position: relative;
   border-top: 1px solid var(--color-border);
+  background-color: #FFFFFF;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: pan-y;
+}
+
+.prima-carousel-wrapper.is-dragging {
+  cursor: grabbing;
+}
+
+.prima-carousel-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
 }
 
 .prima-col {
-  padding: clamp(40px, 4vw, 60px) clamp(24px, 2.5vw, 36px);
+  width: clamp(300px, 28vw, 380px);
+  min-width: clamp(300px, 28vw, 380px);
+  max-width: 380px;
+  min-height: 340px;
+  padding: clamp(38px, 3.5vw, 48px) clamp(26px, 2.5vw, 36px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: #FFFFFF;
   border-right: 1px solid var(--color-border);
+  flex-shrink: 0;
   transition: background-color 0.35s ease;
-}
-
-.prima-col:last-child {
-  border-right: none;
 }
 
 .prima-col:hover {
   background-color: var(--color-block-cream);
 }
 
-.prima-col-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 24px;
-}
-
-.prima-col-num {
-  font-family: var(--font-title);
-  font-size: 1.35rem;
-  color: var(--color-text);
-}
-
-.prima-col-tag {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--color-accent-stone);
+.prima-col-upcoming {
+  background-color: #FAFAF8;
 }
 
 .prima-col-title {
   font-family: var(--font-title);
-  font-size: 1.35rem;
+  font-size: 1.5rem;
   font-weight: 400;
-  line-height: 1.25;
+  line-height: 1.2;
   color: var(--color-text);
   margin-bottom: 16px;
 }
 
 .prima-col-text {
-  font-size: 0.84rem;
-  line-height: 1.8;
+  font-size: 0.86rem;
+  line-height: 1.85;
   color: var(--color-text-muted);
   margin-bottom: 28px;
   flex-grow: 1;
@@ -421,42 +495,11 @@ button {
 }
 
 .prima-col-link:hover {
-  color: var(--color-accent-stone);
+  color: var(--color-olive);
   transform: translateX(4px);
 }
 
-/* 9. Bloco 4: Banner de Manifesto / Citação */
-.prima-quote-banner {
-  width: 100%;
-  padding: clamp(90px, 9vw, 130px) clamp(32px, 8vw, 140px);
-  background-color: var(--color-block-cream);
-  text-align: center;
-  border-bottom: 1px solid var(--color-border);
-}
 
-.prima-quote-content {
-  max-width: 720px;
-  margin: 0 auto;
-}
-
-.prima-quote-text {
-  font-family: var(--font-title);
-  font-size: clamp(1.45rem, 2.2vw, 1.95rem);
-  font-style: italic;
-  font-weight: 300;
-  line-height: 1.55;
-  color: var(--color-text);
-  margin-bottom: 24px;
-}
-
-.prima-quote-author {
-  font-family: var(--font-body);
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--color-accent-stone);
-}
 
 /* 10. Bloco 5: Atendimento no Porto (Estilo Meet the Founder) */
 .prima-contact {
@@ -536,7 +579,7 @@ button {
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--color-accent-stone);
+  color: var(--color-olive);
 }
 
 .prima-item-val {
@@ -546,7 +589,7 @@ button {
 }
 
 .prima-item-val:hover {
-  color: var(--color-accent-stone);
+  color: var(--color-olive);
 }
 
 /* 11. Rodapé Full Width */
@@ -570,7 +613,7 @@ button {
 }
 
 .prima-footer-credit a:hover {
-  color: var(--color-accent-stone);
+  color: var(--color-olive);
 }
 
 /* 12. WhatsApp Flutuante */
@@ -633,7 +676,7 @@ button {
   transform: translateY(0);
 }
 
-/* 15. Responsividade Completa (Tablets & Mobile) */
+/* 15. Responsividade Completa & Estética Mobile de Luxo (Tablets & Smartphones) */
 @media (max-width: 900px) {
   .prima-hero-grid,
   .prima-story-grid,
@@ -642,38 +685,37 @@ button {
   }
 
   .prima-hero-visual {
-    min-height: 440px;
-    height: 50vh;
+    min-height: 480px;
+    height: 52vh;
     width: 100%;
     border-right: none;
     border-bottom: 1px solid var(--color-border);
   }
 
+  .prima-hero-visual img {
+    object-position: center 15%;
+  }
+
   .prima-story-visual-wrap,
   .prima-contact-visual-wrap {
-    padding: 32px 20px;
+    padding: 36px 20px;
     border-right: none;
     border-bottom: 1px solid var(--color-border);
+    background-color: var(--color-block-cream);
   }
 
   .prima-story-visual,
   .prima-contact-visual {
     min-height: 380px;
+    max-height: 480px;
     width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   }
 
   .prima-hero-text,
   .prima-story-text,
   .prima-contact-text {
-    padding: 60px 24px;
-  }
-
-  .prima-columns-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .prima-quote-banner {
-    padding: 80px 24px;
+    padding: clamp(54px, 7vw, 76px) clamp(24px, 5vw, 44px);
   }
 
   .prima-footer-content {
@@ -691,46 +733,166 @@ button {
   .story-mobile {
     display: block;
   }
+
+  .story-mobile p {
+    font-size: 0.94rem;
+    line-height: 1.95;
+    color: var(--color-text-muted);
+    margin-bottom: 18px;
+  }
+
+  .story-mobile strong {
+    color: var(--color-text);
+  }
 }
 
 @media (max-width: 600px) {
+  /* 1. Hero Mobile Refinado */
   .prima-hero-visual {
+    min-height: 380px;
+    height: 50vh;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .prima-hero-visual img {
+    object-position: center 15%;
+  }
+
+  .prima-hero-text {
+    padding: 48px 24px 52px;
+  }
+
+  .prima-brand {
+    margin-bottom: 22px;
+  }
+
+  .prima-logo {
+    max-width: clamp(190px, 58vw, 250px);
+    max-height: 75px;
+  }
+
+  .prima-title {
+    font-size: clamp(2.5rem, 9.6vw, 3.2rem);
+    line-height: 1.08;
+    margin-bottom: 20px;
+  }
+
+  .prima-lead {
+    font-size: 0.92rem;
+    line-height: 1.9;
+    margin-bottom: 24px;
+  }
+
+  .prima-meta-location {
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    margin-bottom: 30px;
+  }
+
+  /* 2. História Mobile */
+  .prima-story-text {
+    padding: 48px 24px 40px;
+  }
+
+  .prima-story-visual-wrap {
+    padding: 24px 20px 40px;
+  }
+
+  .prima-story-visual {
     min-height: 340px;
-    height: 44vh;
+    max-height: 420px;
+    border: 1px solid var(--color-border);
   }
 
-  .prima-story-visual,
-  .prima-contact-visual {
-    min-height: 320px;
-  }
-
-  .prima-story-visual-wrap,
-  .prima-contact-visual-wrap {
-    padding: 24px 16px;
-  }
-
-  .prima-hero-text,
-  .prima-story-text,
-  .prima-contact-text {
-    padding: 44px 20px;
+  /* 3. Procedimentos & Carrossel Mobile */
+  .prima-services {
+    padding: 56px 0 0 0;
   }
 
   .prima-section-intro {
-    padding: 0 20px 32px 20px;
+    padding: 0 24px 24px 24px;
   }
 
-  .prima-columns-grid {
-    grid-template-columns: 1fr;
+  .prima-intro-header {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .prima-heading {
+    font-size: clamp(1.8rem, 7.2vw, 2.2rem);
+    line-height: 1.15;
+    margin-bottom: 12px;
+  }
+
+  .prima-section-subtitle {
+    font-size: 0.84rem;
+    line-height: 1.6;
+    margin-top: -6px;
+  }
+
+  .prima-ctrl-btn {
+    width: 40px;
+    height: 40px;
   }
 
   .prima-col {
-    padding: 36px 20px;
+    width: 300px;
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 350px;
+    padding: 36px 24px;
   }
 
-  .prima-quote-banner {
-    padding: 64px 20px;
+  .prima-col-title {
+    font-size: 1.45rem;
+    margin-bottom: 14px;
   }
 
+  .prima-col-text {
+    font-size: 0.85rem;
+    line-height: 1.8;
+    margin-bottom: 24px;
+  }
+
+  /* 4. Atendimento Mobile */
+  .prima-contact-visual-wrap {
+    padding: 24px 20px 36px;
+  }
+
+  .prima-contact-visual {
+    min-height: 340px;
+    max-height: 420px;
+    border: 1px solid var(--color-border);
+  }
+
+  .prima-contact-text {
+    padding: 48px 24px 56px;
+  }
+
+  .prima-contact-intro {
+    font-size: 0.9rem;
+    line-height: 1.85;
+    margin-bottom: 24px;
+  }
+
+  .prima-contact-list {
+    gap: 18px;
+    padding-top: 20px;
+  }
+
+  .prima-item-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+  }
+
+  .prima-item-val {
+    font-size: 0.92rem;
+    line-height: 1.5;
+  }
+
+  /* 5. Ações & Botões Mobile */
   .prima-actions {
     flex-direction: column;
     width: 100%;
@@ -740,21 +902,17 @@ button {
   .prima-btn {
     width: 100%;
     text-align: center;
-    padding: 14px 20px;
+    padding: 15px 20px;
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
   }
 
-  .prima-title {
-    font-size: clamp(2.2rem, 8.5vw, 2.9rem);
-  }
-
-  .prima-heading {
-    font-size: clamp(1.65rem, 6.5vw, 2.1rem);
-  }
-
+  /* 6. WhatsApp Flutuante Mobile */
   .whatsapp-float {
     bottom: 20px;
     right: 20px;
-    width: 50px;
-    height: 50px;
+    width: 52px;
+    height: 52px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
   }
 }
